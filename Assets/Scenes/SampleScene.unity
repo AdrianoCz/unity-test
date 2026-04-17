@@ -637,7 +637,7 @@ MonoBehaviour:
   Lixo: {fileID: 214840703}
   MaxPoints: 40
   points: 0
-  pointsText: {fileID: 0}
+  pointsText: {fileID: 2108423523}
 --- !u!4 &1911862954
 Transform:
   m_ObjectHideFlags: 0
@@ -962,12 +962,16 @@ PrefabInstance:
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5709607785551571635, guid: a1cd9ee531459d9438cfb3328904bea0, type: 3}
+      propertyPath: points
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5709607785551571635, guid: a1cd9ee531459d9438cfb3328904bea0, type: 3}
       propertyPath: maximumX
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5709607785551571635, guid: a1cd9ee531459d9438cfb3328904bea0, type: 3}
       propertyPath: MaxPoints
-      value: 12312
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 5709607785551571635, guid: a1cd9ee531459d9438cfb3328904bea0, type: 3}
       propertyPath: m_Enabled
