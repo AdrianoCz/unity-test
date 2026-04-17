@@ -25,12 +25,13 @@ public class LixoSpawnerController : MonoBehaviour
     public void AddToPoints(int x)
     {
         points += x;
-        pointsText.text = points.ToString();
+        pointsText.text = "Pontuação: "+ points.ToString();
     }
     // Start is called before the first frame update
     void Start()
     {
         StartCoroutine(SpawnRoutine());
+        pointsText.text = "Pontuação: 0";
     }
 
     // Update is called once per frame
