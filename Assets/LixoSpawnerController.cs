@@ -17,6 +17,7 @@ public class LixoSpawnerController : MonoBehaviour
     public TMP_Text pointsText;
     public TMP_Text victoryText;
     private int counter = 0;
+    public AudioSource source;
     
     IEnumerator SpawnRoutine()
     {
@@ -29,6 +30,7 @@ public class LixoSpawnerController : MonoBehaviour
             
         }
         victoryText.gameObject.SetActive(true);
+        source.Play();
     }
     public void AddToPoints(int x)
     {
