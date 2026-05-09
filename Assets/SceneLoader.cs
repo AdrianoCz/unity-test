@@ -8,4 +8,8 @@ public class SceneLoader : MonoBehaviour
         // Load the scene by its name
         SceneManager.LoadScene("SampleScene");
     }
+    public void LoadMenuScene()
+    {
+        SceneManager.LoadScene("Menu");
+    }
 }
