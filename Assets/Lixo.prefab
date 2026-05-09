@@ -121,6 +121,7 @@ MonoBehaviour:
   points: 0
   pointsText: {fileID: 0}
   victoryText: {fileID: 0}
+  source: {fileID: 0}
 --- !u!54 &3967855872087049407
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -170,7 +171,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4400069412981930250, guid: e9d7266b50ffd5748bec6a5679d211ee, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.57
       objectReference: {fileID: 0}
     - target: {fileID: 4400069412981930250, guid: e9d7266b50ffd5748bec6a5679d211ee, type: 3}
       propertyPath: m_LocalPosition.z

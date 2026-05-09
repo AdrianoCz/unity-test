@@ -16,26 +16,36 @@ public class LixoSpawnerController : MonoBehaviour
 
     public TMP_Text pointsText;
     public TMP_Text victoryText;
-    private int counter = 0;
-    public AudioSource source;
+    public TMP_Text defeatText;
+    public AudioSource victorySound;
+    public AudioSource music;
+    public AudioSource defeatSound;
     
     IEnumerator SpawnRoutine()
     {
 
-        while (points < MaxPoints)
+        while (points < MaxPoints && points >= 0)
         {
             
             Instantiate(Lixo, new Vector3(Random.Range(-maximumX, maximumX + 1), fixedY, fixedZ), Quaternion.identity);
             yield return new WaitForSeconds(timer);
             
         }
+        if (points < 0)
+        {
+            defeatText.gameObject.SetActive(true);
+            music.Stop();
+            defeatSound.Play();
+        } else{
         victoryText.gameObject.SetActive(true);
-        source.Play();
+        music.Stop();
+        victorySound.Play();
+        }
     }
     public void AddToPoints(int x)
     {
         points += x;
-        pointsText.text = "Pontuação: " + points.ToString();
+        pointsText.text = "Pontuacao: " + points.ToString();
     }
     public void StartGame()
     {
@@ -46,7 +56,7 @@ public class LixoSpawnerController : MonoBehaviour
     {
     
         StartCoroutine(SpawnRoutine());
-        pointsText.text = "Pontuação: 0";
+        pointsText.text = "Pontuacao: 0";
         victoryText.gameObject.SetActive(false);
     }
 
